@@ -1,0 +1,103 @@
+:root {
+    --darkAccent-hsl: 210, 50%, 30%; 
+}
+
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif; 
+    color: #000000;
+    background-color: hsla(var(--darkAccent-hsl), 0.1); 
+}
+
+/* Top Section Styles */
+.top-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    position: fixed; 
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10; 
+    transition: background-color 0.3s ease;
+}
+
+.top-section.scrolled {
+    background-color: hsla(var(--darkAccent-hsl), 1);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.top-left, .top-right {
+    display: flex;
+    gap: 20px;
+}
+
+/* Change link colors to grey or black */
+.top-left a, .top-right a {
+    color: #000000; /* Set to a grey color */
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.top-left a:hover, .top-right a:hover {
+    text-decoration: underline;
+    color: #000000; 
+}
+
+.top-center {
+    text-align: center;
+    flex: 1;
+}
+
+.top-center h1 {
+    margin: 0;
+    font-size: 1.8em;
+    font-weight: 600;
+    color: #000000; 
+}
+
+/* Hero Section Styles */
+.hero-container {
+    background-image: url('/public/image.png'); 
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000000;
+    text-align: center;
+}
+/*
+.hero-text {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.5); 
+    border-radius: 10px; 
+}
+*/
+.hero-text h1 {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.hero-text p {
+    font-size: 1.2em;
+}
+
+/* Section Styles */
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+}
