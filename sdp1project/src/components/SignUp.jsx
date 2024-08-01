@@ -1,27 +1,61 @@
-import React from 'react';
-import './components.css';
+import React, { useState } from 'react';
+import './components.css'; 
+import { Link } from 'react-router-dom'; 
 
 const SignUp = () => {
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log('Name:', name);
+    console.log('Email:', email);
+    console.log('Password:', password);
+    setName('');
+    setEmail('');
+    setPassword('');
+  };
+
   return (
-    <div className="form-container">
+    <div className="signup-container">
       <h2>Sign Up</h2>
-      <form>
+      <form onSubmit={handleSubmit} className="signup-form">
         <div className="form-group">
           <label htmlFor="name">Name</label>
-          <input type="text" id="name" name="name" required />
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            required
+          />
         </div>
         <div className="form-group">
           <label htmlFor="email">Email</label>
-          <input type="email" id="email" name="email" required />
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
         </div>
         <div className="form-group">
           <label htmlFor="password">Password</label>
-          <input type="password" id="password" name="password" required />
+          <input
+            type="password"
+            id="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
         </div>
-        <div className="form-group">
-          <button type="submit">Sign Up</button>
-        </div>
+        <button type="submit" className="signup-button">Sign Up</button>
       </form>
+      <p className="redirect-text">
+        <Link to="/signin">Back to SignIn</Link>
+      </p>
     </div>
   );
 };
