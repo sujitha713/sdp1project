@@ -1,35 +1,31 @@
+// TopSection.jsx
 import React, { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import './components.css';
 
 const TopSection = ({ setLoginOpen, setContactUsOpen }) => {
-  const [isScrolled, setIsScrolled] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.pageYOffset > 0);
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
-    <div className={`top-section ${isScrolled ? 'scrolled' : ''}`}>
-      <div className="top-left">
-        <Link to="/properties">Properties</Link>
-        <Link to="/dealers">Dealers</Link>
+    <div className={`top-section ${scrolled ? 'scrolled' : ''}`}>
+      <div className="logo">
+        <h1>COOL ESTATES</h1>
       </div>
-      <div className="top-center">
-        <Link to="/" style={{ textDecoration: 'none', color: 'inherit' }}>
-          <h1>EliteSpace </h1>
-        </Link>
-      </div>
-      <div className="top-right">
+      <nav className="nav-links">
+        <a href="#top-properties">Properties</a>
+        <a href="#lifestyle">Lifestyle</a>
+        <a href="#about-us">About Us</a>
         <a href="#" onClick={() => setLoginOpen(true)}>Login</a>
         <a href="#" onClick={() => setContactUsOpen(true)}>Contact Us</a>
-      </div>
+      </nav>
     </div>
   );
 };

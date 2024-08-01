@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './components.css'; // Ensure this path is correct
+import './components.css'; 
 
 const CreateAccount = ({ isOpen, onClose }) => {
   const [firstName, setFirstName] = useState('');
@@ -82,7 +82,7 @@ const CreateAccount = ({ isOpen, onClose }) => {
         </form>
         <div className="modal-footer">
           <p>
-            Already have an account? <a href="#" className="create-account" onClick={onClose}>Sign In</a>
+          <a href="#" className="create-account" onClick={onClose}>Already have an account? <b>Login</b></a>
           </p>
         </div>
       </div>

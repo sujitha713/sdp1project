@@ -67,7 +67,7 @@ const Login = ({ isOpen, onClose }) => {
         <div className="modal-footer">
           <a href="#" className="forgot-password" onClick={handleForgotPasswordClick}>Forgot Password?</a>
           <p>
-            <a href="#" className="create-account" onClick={handleCreateAccountClick}>Create Account</a>
+            <a href="#" className="create-account" onClick={handleCreateAccountClick}>Don't have an account? <b>Create here</b></a>
           </p>
         </div>
       </div>
