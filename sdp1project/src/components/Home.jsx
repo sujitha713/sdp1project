@@ -1,34 +1,20 @@
 import React, { useState } from 'react';
-import './components.css';
 import { useNavigate } from 'react-router-dom';
 import TopSection from './TopSection';
 import Login from './Login'; 
 import CreateAccount from './CreateAccount';
 import ContactUs from './ContactUs'; 
 import heroImage from '../assets/bg2.jpg';
+import './home.css';
+import './components.css';
 
-// Sample properties data
+
 const propertiesData = [
-  {
-    id: 1,
-    image: '/house1.png',
-  },
-  {
-    id: 2,
-    image: '/house2.png',
-  },
-  {
-    id: 3,
-    image: '/house3.png',
-  },
-  {
-    id: 4,
-    image: '/house4.png',
-  },
-  {
-    id: 5,
-    image: '/house5.png',
-  },
+  { id: 1, image: '/house1.png' },
+  { id: 2, image: '/house2.png' },
+  { id: 3, image: '/house3.png' },
+  { id: 4, image: '/house4.png' },
+  { id: 5, image: '/house5.png' },
 ];
 
 const Home = () => {
@@ -37,19 +23,11 @@ const Home = () => {
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
   
   const navigate = useNavigate();
-  const [currentIndex, setCurrentIndex] = useState(1); // Start with image 1 in the center
+  const [currentIndex, setCurrentIndex] = useState(1);
 
-  const handleGetStartedClick = () => {
-    navigate('/properties'); 
-  };
-
-  const handlePropertyClick = (id) => {
-    navigate(`/properties/${id}`);
-  };
-
-  const handleContactButtonClick = () => {
-    setIsContactUsOpen(true);
-  };
+  const handleGetStartedClick = () => navigate('/properties');
+  const handlePropertyClick = id => navigate(`/properties/${id}`);
+  const handleContactButtonClick = () => setIsContactUsOpen(true);
 
   const heroStyle = {
     backgroundImage: `url(${heroImage})`,
@@ -61,18 +39,13 @@ const Home = () => {
     justifyContent: 'center',
     color: 'white',
     textAlign: 'center',
-    flexDirection: 'column', 
+    flexDirection: 'column',
   };
 
-  const nextSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % propertiesData.length);
-  };
+  const nextSlide = () => setCurrentIndex(prevIndex => (prevIndex + 1) % propertiesData.length);
+  const prevSlide = () => setCurrentIndex(prevIndex => (prevIndex - 1 + propertiesData.length) % propertiesData.length);
 
-  const prevSlide = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + propertiesData.length) % propertiesData.length);
-  };
-
-  const getSlidePosition = (index) => {
+  const getSlidePosition = index => {
     const totalSlides = propertiesData.length;
     const position = (index - currentIndex + totalSlides) % totalSlides;
 
@@ -88,9 +61,9 @@ const Home = () => {
       <TopSection 
         setLoginOpen={setIsLoginOpen} 
         setContactUsOpen={setIsContactUsOpen} 
+        alwaysVisibleBackground={false}
       />
       
-      {/* Hero Section */}
       <div className="hero-container" style={heroStyle}>
         <h1>Welcome to EliteSpace!</h1>
         <p>Your gateway to finding the perfect home.</p>
@@ -99,17 +72,13 @@ const Home = () => {
         </button>
       </div>
 
-      {/* Top Properties This Month Heading */}
       <section id="top-properties">
         <h2>Top Properties This Month</h2>
       </section>
 
-      {/* Custom Properties Slider */}
       <section id="properties-slider">
         <div className="slider-container">
-          <button className="slider-button prev" onClick={prevSlide}>
-            &#10094; {/* Left arrow */}
-          </button>
+          <button className="slider-button prev" onClick={prevSlide}>&#10094;</button>
           <div className="slides">
             {propertiesData.map((property, index) => (
               <div 
@@ -122,13 +91,10 @@ const Home = () => {
               </div>
             ))}
           </div>
-          <button className="slider-button next" onClick={nextSlide}>
-            &#10095; {/* Right arrow */}
-          </button>
+          <button className="slider-button next" onClick={nextSlide}>&#10095;</button>
         </div>
       </section>
 
-      {/* About Us Section */}
       <section id="about-us">
         <h2>About Us</h2>
         <p>Welcome to EliteSpace, your trusted partner in real estate. We are a dedicated team from KL University, B.Tech CSE Honors, committed to providing top-notch real estate solutions.</p>
@@ -167,30 +133,23 @@ const Home = () => {
           <li><strong>Innovation:</strong> We embrace new technologies and ideas to improve our services.</li>
           <li><strong>Excellence:</strong> We are committed to delivering high-quality results in everything we do.</li>
         </ul>
-        
-        {/* Bottom Section */}
-        <div className="bottom-section">
-          <div className="bottom-left">
-            <h3>Team VSSK</h3>
-            <div className="location-info">
-              <span className="location-icon">📍</span>
-              <span>KL University, Andhra Pradesh</span>
-            </div>
-          </div>
-          <div className="bottom-middle">
-            <button className="contact-button" onClick={handleContactButtonClick}>
-              Questions? Contact Me Here.
-            </button>
-          </div>
-          <div className="bottom-right">
-            <h3>Contact</h3>
-            <p>teamvssk@kl.com</p>
-            <p>+91 9988776655</p>
-          </div>
-        </div>
       </section>
 
-      {/* Modals */}
+      <div className="bottom-section">
+        <div className="bottom-left">
+          <h3>Team VSSK</h3>
+          <div className="location-info">
+            <span className="location-icon">📍</span>
+            <span>KL University, Andhra Pradesh</span>
+          </div>
+        </div>
+        <div className="bottom-middle">
+          <button className="contact-button" onClick={handleContactButtonClick}>
+            Contact Us
+          </button>
+        </div>
+      </div>
+
       <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
       <CreateAccount isOpen={isCreateAccountOpen} onClose={() => setIsCreateAccountOpen(false)} />
       <ContactUs isOpen={isContactUsOpen} onClose={() => setIsContactUsOpen(false)} />

@@ -1,0 +1,107 @@
+.home-container {
+    background-color: white;
+  }
+  
+  .hero-container {
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    flex-direction: column;
+  }
+  
+  .get-started-button {
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: white;
+    background-color: #000;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .slider-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .slides {
+    display: flex;
+    transition: transform 0.5s ease;
+  }
+  
+  .slide {
+    min-width: 200px;
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  .slide img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 2em;
+    color: black;
+    background: none;
+    border: none;
+  }
+  
+  .prev {
+    left: 10px;
+  }
+  
+  .next {
+    right: 10px;
+  }
+  
+  #about-us {
+    padding: 40px;
+  }
+  
+  .team {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .team-member {
+    text-align: center;
+  }
+  
+  .team-member img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }
+  
+  .bottom-section {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .bottom-left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-button {
+    padding: 10px 20px;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
