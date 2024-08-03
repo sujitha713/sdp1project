@@ -88,6 +88,7 @@
   
   .bottom-section {
     display: flex;
+    color: #333;
     justify-content: space-between;
     padding: 20px;
   }
@@ -103,5 +104,46 @@
     color: white;
     border: none;
     cursor: pointer;
+  }
+  
+  #popular-localities {
+    color: #333;
+    padding: 60px 20px;
+    text-align: center;
+  }
+  
+  #popular-localities h2 {
+    color: #333;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  .localities-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; 
+    flex-wrap: wrap;
+  }
+  
+  .locality {
+    text-align: center;
+  }
+  
+  .locality h3 {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+  
+  .locality p {
+    font-size: 1em;
+    margin: 0;
+  }
+  
+  .city-dropdown {
+    margin-top: 20px;
+    padding: 10px;
+    font-size: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
   }
   

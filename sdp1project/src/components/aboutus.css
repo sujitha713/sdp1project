@@ -2,33 +2,120 @@
     padding: 60px 20px;
     text-align: center;
     background-color: #f9f9f9;
+    color: #000000;
+  }
+  
+  .about-us-title {
+    font-size: 2.5em; 
+    margin-bottom: 20px;
+  }
+  
+  .team-title {
+    font-size: 2em; 
+    margin-top: 40px;
+    margin-bottom: 20px;
+  }
+  
+  .location-info {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    font-size: 1.1em;
     color: #333;
   }
   
-  .about-us-container h2 {
-    margin-bottom: 20px;
-    font-size: 2.5em;
+  .location-info span {
+    margin-left: 10px; 
   }
   
-  .about-us-container h3 {
-    margin-top: 40px;
-    font-size: 2em;
-    color: #000;
+  .social-media {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; 
   }
   
-  .about-us-container p {
-    font-size: 1.2em;
+  .social-media h4 {
+    margin: 0;
+  }
+  
+  .social-media a {
+    color: #444; 
+    transition: color 0.3s;
+  }
+  
+  .social-media a:hover {
+    color: #000000; 
+  }
+  
+  .about-us-cards {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap; 
+    gap: 20px; 
+  }
+  
+  .about-us-card {
+    background-color: #ffffff; 
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 300px; 
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; 
+    height: auto; 
+  }
+  
+  .about-us-card h3 {
+    margin-top: 0;
+    font-size: 1.8em;
+    color: #000000;
+  }
+  
+  .about-us-card p {
+    font-size: 1.1em;
     line-height: 1.6;
+    color: #333333;
   }
   
-  .about-us-container ul {
+  .about-us-card ul {
     list-style-type: none;
     padding: 0;
+    font-size: 1.1em;
+    color: #333333;
   }
   
-  .about-us-container ul li {
-    font-size: 1.2em;
+  .about-us-card ul li {
     margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .about-us-card ul li:before {
+    content: "•";
+    margin-right: 10px;
+    color: #000000; 
+    font-size: 1.2em;
+  }
+  
+  .additional-content {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  
+  .view-more {
+    margin-top: auto; 
+    background-color: transparent;
+    border: none;
+    color: #000000; 
+    cursor: pointer;
+    font-size: 1em;
+    text-decoration: none; 
   }
   
   .team {
@@ -40,7 +127,7 @@
   }
   
   .team-member {
-    width: 200px;
+    width: 150px;
     text-align: center;
   }
   
@@ -59,3 +146,57 @@
     font-size: 1em;
     color: #666;
   }
+  
+  .call-to-action {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .call-to-action h4 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  .faqs {
+    margin-top: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+  }
+  
+  .faqs h4 {
+    margin-bottom: 10px;
+    font-size: 1.5em;
+  }
+  
+  .faqs .faqs-content {
+    text-align: left;
+    display: inline-block;
+  }
+  
+  .faqs ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  .faqs ul li {
+    margin-bottom: 10px;
+    font-size: 1.1em;
+  }
+  
+  .faqs ul li strong {
+    color: #000; 
+  }
+
+  .contact-email {
+    color: #000000; 
+    text-decoration: none; 
+  }
+  
+  .contact-email:hover {
+    text-decoration: underline; 
+  }
+  
