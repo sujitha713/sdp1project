@@ -194,16 +194,6 @@ const Home = () => {
             <h4>Sujitha</h4>
             <p>Sujitha is our design guru, ensuring that our platform is not only functional but also aesthetically pleasing.</p>
           </div>
-          <div className="team-member">
-            <img src="/kavya.jpg" alt="Kavya" />
-            <h4>Kavya</h4>
-            <p>Kavya manages our customer relations, ensuring a seamless experience for every client.</p>
-          </div>
-          <div className="team-member">
-            <img src="/supriya.jpg" alt="Supriya" />
-            <h4>Supriya</h4>
-            <p>Supriya is our project manager, coordinating efforts and keeping everything on track.</p>
-          </div>
         </div>
       </section>
 
