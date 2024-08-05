@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/229abd2c-c81e-4356-9ed1-3b5b6f6506ce)Overview:
+![image](https://github.com/user-attachments/assets/e6704c88-1136-48f3-8248-d67450ebbb0f)
+
+Overview:
 This is a Real Estate Management System built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to browse properties, sign in/sign up, and manage their profiles. The app also includes features for dealers to manage property listings and an admin section for overall management.
 
 Features:
