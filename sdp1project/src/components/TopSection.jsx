@@ -20,7 +20,7 @@ const TopSection = ({ setLoginOpen, setContactUsOpen, alwaysVisibleBackground })
     <div className={`top-section ${scrolled ? 'scrolled' : ''}`}>
       <div className="logo">
         <Link to="/" className="logo-link">
-          <h1>COOL ESTATES</h1>
+          <h1>EliteSpace</h1>
         </Link>
       </div>
       <nav className="nav-links">
