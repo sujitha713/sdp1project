@@ -147,3 +147,35 @@
     border: 1px solid #ccc;
   }
   
+  .bottom-section {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    padding: 10px;
+    background-color: #333; 
+    color: white;
+  }
+  
+  .bottom-center {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+  }
+  
+  .bottom-left h3 {
+    margin: 0; 
+  }
+  
+  .contact-button {
+    padding: 10px 10px;
+    background-color: #000000; 
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .contact-button:hover {
+    background-color: #000000;
+  }
+  

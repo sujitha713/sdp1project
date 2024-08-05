@@ -198,18 +198,10 @@ const Home = () => {
       </section>
 
       <div className="bottom-section">
-        <div className="bottom-left">
-          <h3>Team VSSK</h3>
-          <div className="location-info">
-            <span className="location-icon">📍</span>
-            <span>KL University, Andhra Pradesh</span>
+         <div className="bottom-center">
+          <h3>Team VSSK   |  📍 KL University, Andhra Pradesh   |   Any Quesries? <button className="contact-button" onClick={handleContactButtonClick}> 
+            Contact Us </button></h3>
           </div>
-        </div>
-        <div className="bottom-middle">
-          <button className="contact-button" onClick={handleContactButtonClick}>
-            Contact Us
-          </button>
-        </div>
       </div>
 
       <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
