@@ -1,4 +1,6 @@
-![image](https://github.com/user-attachments/assets/229abd2c-c81e-4356-9ed1-3b5b6f6506ce)Overview:
+![image](https://github.com/user-attachments/assets/e6704c88-1136-48f3-8248-d67450ebbb0f)
+
+Overview:
 This is a Real Estate Management System built with the MERN stack (MongoDB, Express.js, React.js, Node.js). It allows users to browse properties, sign in/sign up, and manage their profiles. The app also includes features for dealers to manage property listings and an admin section for overall management.
 
 Features:
@@ -61,12 +63,20 @@ Admin Dashboard:
 
 Screenshots:
 Homepage:
-![Screenshot (932)](https://github.com/user-attachments/assets/b76d5aeb-6115-40f0-9509-4cb499ac3acf)
+![image](https://github.com/user-attachments/assets/e6704c88-1136-48f3-8248-d67450ebbb0f)
+![image](https://github.com/user-attachments/assets/edda7105-3c34-4ccc-ba76-9407b43e538b)
+
+Login/SignUp:
+![image](https://github.com/user-attachments/assets/7b6fb85c-c8bc-4848-a976-5194bee81553)
+![image](https://github.com/user-attachments/assets/f80a73a8-087f-41f2-ba61-05722014679f)
+![image](https://github.com/user-attachments/assets/08c95aee-c339-4ab3-84fc-c37c93fb83ca)
+
 ContactUS:
-![Screenshot (936)](https://github.com/user-attachments/assets/4570e66c-ff46-47ae-b520-db5b951be31d)
-Login:
-![Screenshot (935)](https://github.com/user-attachments/assets/1c28c3f9-009c-4f51-95bf-c94dd2846e4c)
+![image](https://github.com/user-attachments/assets/3f603752-1437-4906-af65-c275403b0e52)
+
+Properties page:
+![image](https://github.com/user-attachments/assets/824af7c3-9678-467e-8ee4-e74b2a120ec9)
+![image](https://github.com/user-attachments/assets/474b8e32-e44f-458c-961b-90003c6ebf92)
+
 Lifestyle page:
-![Screenshot (934)](https://github.com/user-attachments/assets/19e16692-edb4-4ac0-ae05-209cff207c51)
-Top properties in selected city section in Homepage:
-![Screenshot (933)](https://github.com/user-attachments/assets/c02ec73d-0292-40a2-a2c4-506710dd3bef)
+![image](https://github.com/user-attachments/assets/a0f06a77-ca6d-4017-bacb-e28ff9dfaf62)
