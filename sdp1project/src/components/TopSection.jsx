@@ -27,8 +27,8 @@ const TopSection = ({ setLoginOpen, setContactUsOpen, alwaysVisibleBackground })
         <NavLink to="/properties">Properties</NavLink>
         <NavLink to="/lifestyle">Lifestyle</NavLink>
         <Link to="/about-us">About Us</Link>
-        <a href="#" onClick={() => setLoginOpen(true)}>Login</a>
         <a href="#" onClick={() => setContactUsOpen(true)}>Contact Us</a>
+        <a href="#" onClick={() => setLoginOpen(true)}>Login</a>
       </nav>
     </div>
   );

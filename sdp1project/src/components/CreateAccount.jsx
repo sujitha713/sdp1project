@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './components.css'; 
+import './CreateAccount.css';
 
 const CreateAccount = ({ isOpen, onClose }) => {
   const [firstName, setFirstName] = useState('');
@@ -24,8 +24,8 @@ const CreateAccount = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="close-button" onClick={onClose}>✖</button>
-        <h2 style={{ textAlign: 'center', marginTop: '30px' }}>Create Account</h2>
+        <button className="create-account-close-button" onClick={onClose}>✖</button>
+        <h2 style={{ textAlign: 'center', marginTop: '30px', color: '#333' }}>Create Account</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>
@@ -78,11 +78,11 @@ const CreateAccount = ({ isOpen, onClose }) => {
               placeholder="Re-type Password"
             />
           </div>
-          <button type="submit" className="login-button">Create Account</button>
+          <button type="submit" className="create-button">Create Account</button>
         </form>
         <div className="modal-footer">
           <p>
-          <a href="#" className="create-account" onClick={onClose}>Already have an account? <b>Login</b></a>
+            <a href="#" className="create-account" onClick={onClose}>Already have an account? <b>Login</b></a>
           </p>
         </div>
       </div>

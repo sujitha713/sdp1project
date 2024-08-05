@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
 import './Properties.css';
 import TopSection from './TopSection';
+import Login from './Login';
+import ContactUs from './ContactUs';
 import MapSearch from './MapSearch';
 
 const Properties = () => {
   const [isLoginOpen, setIsLoginOpen] = useState(false);
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
   const [mapSearchOpen, setMapSearchOpen] = useState(false);
-  const [selectedCity, setSelectedCity] = useState('hyderabad'); // Default city
+  const [selectedCity, setSelectedCity] = useState('hyderabad'); 
 
   const [minPrice, setMinPrice] = useState('');
   const [maxPrice, setMaxPrice] = useState('');
@@ -238,6 +240,8 @@ const Properties = () => {
         </div>
       </div>
       {mapSearchOpen && <MapSearch city={selectedCity} onClose={handleCloseMapSearch} />}
+      <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
+      <ContactUs isOpen={isContactUsOpen} onClose={() => setIsContactUsOpen(false)} />
     </div>
   );
 };

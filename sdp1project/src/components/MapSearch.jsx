@@ -54,7 +54,7 @@ const MapSearch = ({ onClose }) => {
   return (
     <div className="map-search-overlay">
       <div className="map-search-container">
-        <button onClick={onClose} className="close-button">Close</button>
+        <button onClick={onClose} className="map-close-button">Close</button>
         <div className="city-selector">
           <label htmlFor="city">Select City:</label>
           <select id="city" value={city} onChange={handleCityChange}>

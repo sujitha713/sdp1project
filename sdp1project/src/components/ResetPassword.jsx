@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import './components.css'; 
+import './ResetPassword.css';
 
 const ResetPassword = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState('');
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log('Reset link sent to:', email);
+    console.log('Resetting password for:', email);
     setEmail('');
-    onClose(); 
+    onClose();
   };
 
   if (!isOpen) return null;
@@ -16,26 +16,20 @@ const ResetPassword = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="close-button" onClick={onClose}>✖</button>
-        <h2 style={{ textAlign: 'center', marginTop: '30px' }}>Reset Password</h2>
+        <button className="reset-password-close-button" onClick={onClose}>✖</button>
+        <h2>Reset Password</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <input
               type="email"
-              id="reset-email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
               placeholder="Email"
             />
           </div>
-          <button type="submit" className="login-button">Send Reset Link</button>
+          <button type="submit" className="reset-button">Reset Password</button>
         </form>
-        <div className="modal-footer">
-          <p>
-            <a href="#" className="create-account" onClick={onClose}>Back to Sign In</a>
-          </p>
-        </div>
       </div>
     </div>
   );

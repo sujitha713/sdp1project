@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './components.css';
+import './contactus.css'; // Import specific CSS
 
 const ContactUs = ({ isOpen, onClose }) => {
   const [firstName, setFirstName] = useState('');
@@ -30,8 +30,8 @@ const ContactUs = ({ isOpen, onClose }) => {
   return (
     <div className="modal-overlay">
       <div className="modal-content">
-        <button className="close-button" onClick={onClose}>✖</button>
-        <h2 style={{ textAlign: 'center', marginTop: '30px' }}>Contact Us</h2>
+      <button className="contactus-close-button" onClick={onClose}>✖</button>
+      <h2 style={{ textAlign: 'center', marginTop: '30px', color:' #333'}}>Contact Us</h2>
         <form onSubmit={handleSubmit}>
           <div className="form-group">
             <label>Name</label>

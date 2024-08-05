@@ -94,205 +94,6 @@ section {
   border-color: #ffffff;
 }
 
-.login-container {
-  max-width: 400px; 
-  margin: 50px auto; 
-  padding: 20px;
-  border: 1px solid #ccc; 
-  border-radius: 10px; 
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); 
-  background-color: #fff; 
-}
-
-.login-form {
-  display: flex;
-  flex-direction: column; 
-}
-
-.form-group {
-  margin-bottom: 15px; 
-}
-
-label {
-  margin-bottom: 5px; 
-  font-weight: bold;
-}
-
-input {
-  padding: 10px; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
-  font-size: 1em; 
-}
-
-.redirect-text {
-  margin-top: 10px; 
-  text-align: center; 
-}
-
-.modal-overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5); 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1000; 
-}
-
-.modal-content {
-  background-color: white; 
-  padding: 20px;
-  border-radius: 10px; 
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
-  max-width: 400px; 
-  width: 90%; 
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  position: relative;
-}
-
-.login-button {
-  padding: 12px 20px; 
-  background-color: #000000;
-  color: #fff;
-  border: none; 
-  border-radius: 3px; 
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%; 
-  margin-top: 10px; 
-}
-
-.login-button:hover {
-  background-color: #333; 
-}
-
-.form-group {
-  margin-bottom: 15px; 
-}
-
-label {
-  margin-bottom: 5px; 
-  font-weight: bold; 
-}
-
-input {
-  padding: 10px; 
-  border: 0px solid #ccc; 
-  border-radius: 13px; 
-  font-size: 1em; 
-}
-
-.close-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background: none;
-  border: none;
-  font-size: 1.5em;
-  color: #000000;
-  cursor: pointer;
-}
-
-input {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-  width: 100%;
-  box-sizing: border-box;
-  color: #333;
-}
-
-input::placeholder {
-  color: #aaa;
-}
-
-button.login-button {
-  padding: 10px;
-  background-color: #000000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  margin-top: 10px;
-}
-
-button.login-button:hover {
-  background-color: #000000;
-}
-
-.modal-footer {
-  margin-top: 20px; 
-  text-align: center; 
-}
-
-.forgot-password,
-.create-account {
-  color: #000000; 
-  text-decoration: none; 
-}
-
-.forgot-password:hover,
-.create-account:hover {
-  text-decoration: underline;
-}
-
-.modal-footer {
-  margin-top: 20px; 
-  text-align: center; 
-}
-
-.forgot-password,
-.create-account {
-  color: #000000; 
-  text-decoration: none; 
-}
-
-.forgot-password:hover,
-.create-account:hover {
-  text-decoration: underline; 
-}
-
-.form-group {
-  margin-bottom: 15px;
-}
-
-.name-inputs {
-  display: flex;
-  justify-content: space-between;
-}
-
-.name-inputs input {
-  flex: 1;
-  margin-right: 10px;
-}
-
-.name-inputs input:last-child {
-  margin-right: 0;
-}
-
-label {
-  margin-bottom: 5px;
-  font-weight: normal;
-}
-
-input, textarea, select {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1em;
-  width: 100%;
-  box-sizing: border-box;
-}
-
 .dropdown-select {
   color: #aaa; 
 }
@@ -308,22 +109,6 @@ select option {
 textarea {
   resize: vertical;
   min-height: 100px;
-}
-
-button.login-button {
-  padding: 10px;
-  background-color: #000000;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  margin-top: 10px;
-}
-
-button.login-button:hover {
-  background-color: #000000;
 }
 
 .property-slide {
@@ -492,7 +277,6 @@ html {
   color: #666;
 }
 
-
 /* About Us Bottom Section Styles */
 .bottom-section {
   display: flex;
@@ -533,7 +317,7 @@ html {
 .contact-button {
   padding: 10px 20px;
   font-size: 1em;
-  color: #ffffff;
+  color: #000000;
   background-color: #000000;
   border: none;
   border-radius: 5px;
