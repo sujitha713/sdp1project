@@ -55,7 +55,7 @@ const Properties = () => {
   return (
     <div className="properties-page">
       <TopSection setLoginOpen={setIsLoginOpen} setContactUsOpen={setIsContactUsOpen} />
-      <h1>Properties</h1>
+      <h1>   *     </h1>
       <div className="properties-content">
         <div className="search-filters">
           <div className="search-header">
