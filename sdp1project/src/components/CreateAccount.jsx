@@ -8,16 +8,53 @@ const CreateAccount = ({ isOpen, onClose }) => {
   const [password, setPassword] = useState('');
   const [retypePassword, setRetypePassword] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Creating account for:', firstName, lastName, email);
-    setFirstName('');
-    setLastName('');
-    setEmail('');
-    setPassword('');
-    setRetypePassword('');
-    onClose(); 
-  };
+
+    // Validate password match
+    if (password !== retypePassword) {
+        alert("Passwords don't match!");
+        return;
+    }
+
+    // Prepare the payload
+    const payload = {
+      firstName,
+      lastName,
+      email,
+      password,
+    };
+
+    try {
+      // Send the data to the backend
+      const response = await fetch('/api/register', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(payload),
+      });
+
+      const data = await response.json();
+      console.log(data);
+
+      if (response.ok) {
+        // If the request was successful, reset the form and close the modal
+        setFirstName('');
+        setLastName('');
+        setEmail('');
+        setPassword('');
+        setRetypePassword('');
+        onClose(); // Close the modal
+      } else {
+        // Handle errors from the server
+        alert(data.message || 'Failed to create account');
+      }
+    } catch (error) {
+      console.error('Error creating account:', error);
+      alert('An error occurred. Please try again.');
+    }
+};
 
   if (!isOpen) return null;
 

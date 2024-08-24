@@ -10,15 +10,37 @@ const Login = ({ isOpen, onClose, onLogin }) => {
   const [isResetModalOpen, setResetModalOpen] = useState(false);
   const [isCreateAccountModalOpen, setCreateAccountModalOpen] = useState(false);
 
-  const handleSubmit = (e) => {
+  const [loading, setLoading] = useState(false);
+const [error, setError] = useState(null);
+
+const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log('Email:', email);
-    console.log('Password:', password);
-    setEmail('');
-    setPassword('');
-    onLogin();
-    onClose();
-  };
+    setLoading(true);
+    setError(null);
+
+    try {
+        // Make API call to login endpoint here
+        // const response = await fetch('/api/login', {
+        //     method: 'POST',
+        //     headers: { 'Content-Type': 'application/json' },
+        //     body: JSON.stringify({ email, password })
+        // });
+        // const result = await response.json();
+
+        // Simulating successful login
+        console.log('Email:', email);
+        console.log('Password:', password);
+        setEmail('');
+        setPassword('');
+        onLogin();
+        onClose();
+    } catch (error) {
+        setError('Login failed. Please try again.');
+    } finally {
+        setLoading(false);
+    }
+};
+
 
   const handleForgotPasswordClick = () => {
     setResetModalOpen(true);
