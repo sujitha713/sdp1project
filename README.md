@@ -26,8 +26,8 @@ Prerequisites --> Node.js, MongoDB
 
 Installation:
 1. Clone the repository:
-   git clone https://github.com/your-username/real-estate-management-system.git
-   cd real-estate-management-system
+   git clone https://github.com/sujitha713/sdp1project.git
+   cd sdp1project
 2. Install server dependencies:
   cd server
   npm install
