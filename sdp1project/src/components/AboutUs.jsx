@@ -59,14 +59,19 @@ const AboutUs = () => {
           <div className="about-us-card">
             <h3>Our Values</h3>
             <ul>
-              <li><strong>Integrity:</strong> We believe in honesty and transparency in all our dealings.</li>
-              <li><strong>Customer Focus:</strong> Our clients' needs and satisfaction are our top priorities.</li>
-              <li><strong>Innovation:</strong> We embrace new technologies and ideas to improve our services.</li>
-              <li><strong>Excellence:</strong> We are committed to delivering high-quality results in everything we do.</li>
-              <li><strong>Teamwork:</strong> We work collaboratively as a team to achieve our goals and provide the best possible service to our clients.</li>
+              <li>Integrity </li>
+              <li>Customer Focus</li>
+              <li>Innovation</li>
+              <li>Excellence </li>
+              <li>Teamwork </li>
             </ul>
             {expandedCard === 'values' && (
               <div className="additional-content">
+              <li><strong>Integrity: </strong> We believe in honesty and transparency in all our dealings.</li>
+              <li><strong>Customer Focus: </strong> Our clients' needs and satisfaction are our top priorities.</li>
+              <li><strong>Innovation: </strong> We embrace new technologies and ideas to improve our services.</li>
+              <li><strong>Excellence: </strong> We are committed to delivering high-quality results in everything we do.</li>
+              <li><strong>Teamwork: </strong> We work collaboratively as a team to achieve our goals and provide the best possible service to our clients.</li>
                 <p>We foster a culture of collaboration and respect, encouraging our team members to share ideas and support one another.</p>
                 <p>Our values guide our actions and decisions, ensuring that we remain accountable to our clients and each other.</p>
               </div>

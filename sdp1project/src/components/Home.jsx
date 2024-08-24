@@ -72,6 +72,7 @@ const Home = () => {
   const [isCreateAccountOpen, setIsCreateAccountOpen] = useState(false);
   const [isContactUsOpen, setIsContactUsOpen] = useState(false);
   const [selectedCity, setSelectedCity] = useState('Kolkata');
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   
   const navigate = useNavigate();
   const [currentIndex, setCurrentIndex] = useState(1);
@@ -79,19 +80,6 @@ const Home = () => {
   const handleGetStartedClick = () => navigate('/properties');
   const handlePropertyClick = id => navigate(`/properties/${id}`);
   const handleContactButtonClick = () => setIsContactUsOpen(true);
-
-  const heroStyle = {
-    backgroundImage: `url(${heroImage})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    color: 'white',
-    textAlign: 'center',
-    flexDirection: 'column',
-  };
 
   const nextSlide = () => setCurrentIndex(prevIndex => (prevIndex + 1) % propertiesData.length);
   const prevSlide = () => setCurrentIndex(prevIndex => (prevIndex - 1 + propertiesData.length) % propertiesData.length);
@@ -108,49 +96,53 @@ const Home = () => {
   };
 
   return (
-    <div className="home-container" style={{ backgroundColor: 'white' }}>
+    <div className="home-container">
       <TopSection 
         setLoginOpen={setIsLoginOpen} 
         setContactUsOpen={setIsContactUsOpen} 
         alwaysVisibleBackground={false}
       />
       
-      <div className="hero-container" style={heroStyle}>
+      <div className="hero-container" style={{ backgroundImage: `url(${heroImage})` }}>
         <h1>Welcome to EliteSpace!</h1>
         <p>Your gateway to finding the perfect home.</p>
         <button onClick={handleGetStartedClick} className="get-started-button">
           Get Started
         </button>
-      </div>
 
-      <section id="popular-localities">
-        <h2>
-          Popular Localities in {selectedCity} 
-        </h2>
-        <select
-          className="city-dropdown"
-          onChange={(e) => setSelectedCity(e.target.value)}
-          value={selectedCity}
-        >
-          <option value="Hyderabad">Hyderabad</option>
-          <option value="Bangalore">Bangalore</option>
-          <option value="Mumbai">Mumbai</option>
-          <option value="Pune">Pune</option>
-          <option value="Ahmedabad">Ahmedabad</option>
-          <option value="Chennai">Chennai</option>
-          <option value="Kolkata">Kolkata</option>
-          <option value="Delhi">Delhi</option>
-        </select>
-        <div className="localities-container">
-          {cityAreas[selectedCity].map((area, index) => (
-            <div className="locality" key={index}>
-              <h3>{area.name}</h3>
-              <p>{area.sellers} top rated sellers</p>
-              <p>{area.listings} active listings</p>
+        <section id="popular-localities">
+            <h2>Popular Localities in {selectedCity}</h2>
+            <div className="dropdown-container">
+              <select
+                className={`city-dropdown ${isDropdownOpen ? 'open' : ''}`}
+                onChange={(e) => setSelectedCity(e.target.value)}
+                value={selectedCity}
+                onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              >
+                <option value="Hyderabad">Hyderabad</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="Mumbai">Mumbai</option>
+                <option value="Pune">Pune</option>
+                <option value="Ahmedabad">Ahmedabad</option>
+                <option value="Chennai">Chennai</option>
+                <option value="Kolkata">Kolkata</option>
+                <option value="Delhi">Delhi</option>
+              </select>
+              <span className="dropdown-arrow">
+                <i className="fas fa-chevron-down"></i>
+              </span>
             </div>
-          ))}
-        </div>
-      </section>
+            <div className="localities-container">
+              {cityAreas[selectedCity].map((area, index) => (
+                <div className="glass-card" key={index}>
+                  <h3>{area.name}</h3>
+                  <p>{area.sellers} top rated sellers</p>
+                  <p>{area.listings} active listings</p>
+                </div>
+              ))}
+            </div>
+        </section>
+      </div>
 
       <section id="top-properties">
         <h2>Top Properties This Month in {selectedCity}</h2>
@@ -177,31 +169,26 @@ const Home = () => {
 
       <section id="about-us">
         <h2>About Us</h2>
-        <p>Welcome to EliteSpace, your trusted partner in real estate. We are a dedicated team from KL University, B.Tech CSE Honors, committed to providing top-notch real estate solutions.</p>
-        
+        <p>Welcome to EliteSpace, your trusted partner in real estate...</p>
         <h3>Our Mission</h3>
-        <p>Our mission is to connect people with their dream homes and provide exceptional service throughout the buying and selling process. We strive to offer the most comprehensive and user-friendly real estate experience possible.</p>
-
+        <p>Our mission is to connect people with their dream homes...</p>
         <h3>Our Team</h3>
         <div className="team">
           <div className="team-member">
             <img src="/vysh.jpg" alt="Sujitha" />
             <h4>Vyshnavi</h4>
-            <p>Vyshnavi is a tech enthusiast and a coding expert who brings innovative solutions to our projects.</p>
           </div>
           <div className="team-member">
             <img src="/suji.jpg" alt="Vyshnavi" />
             <h4>Sujitha</h4>
-            <p>Sujitha is our design guru, ensuring that our platform is not only functional but also aesthetically pleasing.</p>
           </div>
         </div>
       </section>
 
       <div className="bottom-section">
-         <div className="bottom-center">
-          <h3>Team VSSK   |  📍 KL University, Andhra Pradesh   |   Any Quesries? <button className="contact-button" onClick={handleContactButtonClick}> 
-            Contact Us </button></h3>
-          </div>
+        <div className="bottom-center">
+          <h3>Team VSSK   |  📍 KL University, Andhra Pradesh   |   Any Queries? <button className="contact-button" onClick={handleContactButtonClick}>Contact Us</button></h3>
+        </div>
       </div>
 
       <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
