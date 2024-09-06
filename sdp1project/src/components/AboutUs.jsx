@@ -105,28 +105,38 @@ const AboutUs = () => {
           <div className="team-member">
             <img src="/vysh.jpg" alt="Vyshnavi" />
             <h4>Vyshnavi</h4>
-            <p>Vyshnavi is a tech enthusiast and a coding expert who brings innovative solutions to our projects.</p>
+            <p>Vyshnavi is a tech enthusiast & coding expert who brings innovative solutions to our projects.</p>
           </div>
           <div className="team-member">
             <img src="/suji.jpg" alt="Sujitha" />
             <h4>Sujitha</h4>
             <p>Sujitha is our design guru, ensuring that our platform is not only functional but also aesthetically pleasing.</p>
           </div>
+          <div className="team-member">
+            <img src="/kavya.jpg" alt="Kavya" />
+            <h4>Kavya</h4>
+            <p>Kavya is a tech enthusiast and a coding expert who brings innovative solutions to our projects.</p>
+          </div>
+          <div className="team-member">
+            <img src="/sups.jpg" alt="Supriya" />
+            <h4>Supriya</h4>
+            <p>Supriya is a key team member, helping to coordinate tasks & ensure that our project works fine.</p>
+          </div>
         </div>
 
         <div className="location-info">
-          <p>We are B.Tech students specializing in Computer Science Engineering.</p>
+          <p>We are B.Tech students specializing in Computer Science Engineering, developed using the MERN stack for our college hackathon, is delivered on time and meets all quality standards. <br/>
           <FaMapMarkerAlt /> 
-          <span> KL University, Vaddeswaram, India</span>
+          <span> KL University, Vaddeswaram, India</span></p>
         </div>
 
         <div className="faqs">
           <h4>Frequently Asked Questions</h4>
           <div className="faqs-content">
             <ul>
-              <li><strong>What is the purpose of this project?</strong> This project aims to provide a user-friendly platform for real estate transactions.</li>
-              <li><strong>Who is the target audience?</strong> Our target audience includes home buyers, sellers, and real estate agents.</li>
-              <li><strong>How can I provide feedback?</strong> You can reach out to us through the contact information provided above.</li>
+              <li><strong>What is the purpose of this project?</strong> <br /> This project aims to provide a user-friendly platform for real estate transactions.</li>
+              <li><strong>Who is the target audience?</strong> <br />Our target audience includes home buyers, sellers, and real estate agents.</li>
+              <li><strong>How can I provide feedback?</strong> <br />You can reach out to us through the contact information provided above.</li>
             </ul>
           </div>
         </div>

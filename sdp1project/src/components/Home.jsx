@@ -5,8 +5,10 @@ import Login from './Login';
 import CreateAccount from './CreateAccount';
 import ContactUs from './ContactUs'; 
 import heroImage from '../assets/bg2.jpg';
+import { Link } from 'react-router-dom';
 import './home.css';
 import './components.css';
+import { FaMapMarkerAlt, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 
 const propertiesData = [
   { id: 1, image: '/house1.png' },
@@ -105,10 +107,10 @@ const Home = () => {
       
       <div className="hero-container" style={{ backgroundImage: `url(${heroImage})` }}>
         <h1>Welcome to EliteSpace!</h1>
-        <p>Your gateway to finding the perfect home.</p>
-        <button onClick={handleGetStartedClick} className="get-started-button">
+        <p1>Your gateway to finding the perfect home.</p1>
+        <p2><button onClick={handleGetStartedClick} className="get-started-button">
           Get Started
-        </button>
+        </button></p2>
 
         <section id="popular-localities">
             <h2>Popular Localities in {selectedCity}</h2>
@@ -126,8 +128,7 @@ const Home = () => {
                 <option value="Ahmedabad">Ahmedabad</option>
                 <option value="Chennai">Chennai</option>
                 <option value="Kolkata">Kolkata</option>
-                <option value="Delhi">Delhi</option>
-              </select>
+                <option value="Delhi">Delhi</option>              </select>
               <span className="dropdown-arrow">
                 <i className="fas fa-chevron-down"></i>
               </span>
@@ -168,29 +169,33 @@ const Home = () => {
       </section>
 
       <section id="about-us">
-        <h2>About Us</h2>
-        <p>Welcome to EliteSpace, your trusted partner in real estate...</p>
-        <h3>Our Mission</h3>
-        <p>Our mission is to connect people with their dream homes...</p>
-        <h3>Our Team</h3>
-        <div className="team">
-          <div className="team-member">
-            <img src="/vysh.jpg" alt="Sujitha" />
-            <h4>Vyshnavi</h4>
-          </div>
-          <div className="team-member">
-            <img src="/suji.jpg" alt="Vyshnavi" />
-            <h4>Sujitha</h4>
-          </div>
-        </div>
-      </section>
+    <h2>About Us</h2>
+    <p>Welcome to EliteSpace, your trusted partner in real estate. We specialize in providing comprehensive real estate services to help you find your ideal property, whether you're looking to buy or rent.</p>
+    <p>Our mission is to connect people with their dream homes through personalized service and a deep understanding of the local market. We are a team with commitment to excellence, we strive to make every real-estate searching smooth and successful. At EliteSpace, your satisfaction is our top priority, and we're here to support you every step of the way.</p>
+    </section>
 
-      <div className="bottom-section">
-        <div className="bottom-center">
-          <h3>Team VSSK   |  📍 KL University, Andhra Pradesh   |   Any Queries? <button className="contact-button" onClick={handleContactButtonClick}>Contact Us</button></h3>
+      {/* Footer */}
+      <div className="footer">
+      <div className="footer-poweredby">
+          <p>Powered by  <Link to="/about-us">EliteSpace team</Link></p>
+        </div>
+        <div className="footer-content">
+          <div className="footer-left">
+            <h3>EliteSpace</h3>
+            <div className="footer-icons">
+              <a href="#"><i className="fab fa-instagram"></i></a>
+              <a href="#"><i className="fab fa-facebook"></i></a>
+              <a href="#"><i className="fab fa-twitter"></i></a>
+            </div>
+          </div>
+          <div className="footer-right">
+            <p>Team VSSK - teamvssk@klu.com <br /><FaMapMarkerAlt /> 
+            <span> KL University, Vaddeswaram, India</span></p>
+            <p>Any Queries? <button className="contact-button" onClick={handleContactButtonClick}>Contact Us</button> </p>
+          </div>
         </div>
       </div>
-
+      {/* Modals */}
       <Login isOpen={isLoginOpen} onClose={() => setIsLoginOpen(false)} />
       <CreateAccount isOpen={isCreateAccountOpen} onClose={() => setIsCreateAccountOpen(false)} />
       <ContactUs isOpen={isContactUsOpen} onClose={() => setIsContactUsOpen(false)} />

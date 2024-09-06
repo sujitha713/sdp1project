@@ -1,6 +1,6 @@
 .home-container {
-  background-color: white;
-  font-family: 'Florentino', sans-serif;
+  background-color: #f8f6eb;
+  font-family: 'Georgia', serif;
 }
 
 .hero-container {
@@ -25,7 +25,7 @@
   cursor: pointer;
   margin-top: 20px; 
   align-self: center; 
-  font-family: 'Harietta', sans-serif;
+  font-family: 'Georgia', sans-serif;
 }
 
 .slider-container {
@@ -186,34 +186,73 @@
   padding: 20px; 
 }
 
-.bottom-section {
-  display: flex;
-  justify-content: center; 
-  align-items: center;
-  padding: 10px;
-  background-color: #333; 
-  color: white;
+.footer {
+  background-color: #f8f6eb;
+  padding: 20px 0;
+  font-family: 'Georgia', serif;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
 }
 
-.bottom-center {
-  display: flex;
-  align-items: center;
-  gap: 40px; 
+.footer-poweredby {
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+  font-size: 12px;
 }
 
-.bottom-left h3 {
-  margin: 0; 
+.footer-poweredby a {
+  color: #333;
+  text-decoration: none;
+}
+
+.footer-poweredby a:hover {
+  text-decoration: underline;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+
+.footer-left h3 {
+  margin-bottom: 10px;
+}
+
+.footer-icons a {
+  color: #333;
+  margin-right: 10px;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+.footer-right p {
+  margin: 5px 0;
+}
+
+.footer-team {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.footer-team h3 {
+  font-size: 16px;
+  font-weight: normal;
 }
 
 .contact-button {
-  padding: 10px 10px;
-  background-color: #000000; 
+  background-color: #333;
   color: white;
   border: none;
-  border-radius: 5px;
+  padding: 8px 12px;
   cursor: pointer;
+  margin-left: 10px;
 }
 
 .contact-button:hover {
-  background-color: #000000;
+  background-color: #555;
 }

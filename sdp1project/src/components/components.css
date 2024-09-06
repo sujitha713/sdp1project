@@ -4,7 +4,7 @@
 
 body {
   margin: 0;
-  font-family: 'Inter', sans-serif;
+  font-family: 'Georgia', sans-serif;
   color: #000000;
   background-color: hsla(var(--darkAccent-hsl), 0.1);
 }
@@ -35,6 +35,7 @@ body {
 
 .top-section .logo h1 {
   margin: 0;
+  font-family: 'Georgia', serif;
   font-size: 24px;
   color: #ffffff; 
 }
@@ -46,6 +47,7 @@ body {
 }
 
 .top-section .nav-links a {
+  font-family: 'Georgia', serif;
   color: #ffffff;
   text-decoration: none;
   font-weight: 700;
@@ -70,11 +72,12 @@ body {
 .home-container {
   background-color: black; 
   min-height: 100vh;
-  color: #ffffff; 
+  color: #000000; 
 }
 
 section {
   padding: 60px 20px;
+  font-family: 'Georgia', serif;
   text-align: center;
 }
 
@@ -118,6 +121,7 @@ textarea {
 /* About Us section */
 #about-us {
   padding: 60px 20px;
+  font-family: 'Georgia', serif;
   text-align: center;
   background-color: #ffffff;
   color: #000000;
